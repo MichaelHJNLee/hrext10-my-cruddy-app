@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HREXT10 R00lz!</title>
+  <title>NBA2K MyPlayer Creator</title>
   <script
           src="https://code.jquery.com/jquery-3.3.1.js"
           integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -12,7 +12,61 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
 <body class="m-3">
-  <div class="container">
+  <div class="heading">
+    <h1>NBA2K MyPlayer Creator</h1>
+  </div>
+  <br>
+  <div class="name-container">
+    <h3>Player Name</h3>
+  </div>
+  <div class="name-input">
+    <form>
+      <input type="text" id="name" value=''><br>
+    </form>
+  </div>
+  <br>
+  <br>
+  <div class="other-inputs">
+    <div class="jersey">
+      Jersey Number:
+      <select class="select-numbers">
+        <option value="00">00</option>
+      </select>
+    </div>
+    <div class= "position">
+      Position:  
+      <select class = "select-position">
+        <option value="PG">PG</option>
+        <option value="SG">SG</option>
+        <option value="SF">SF</option>
+        <option value="PF">PF</option>
+        <option value="C">C</option>
+      </select>
+    </div>
+    <div class="archetype">
+      Archetype: 
+      <select class="select-archetype">
+        Sharpshooter, Defensive Specialist, Rim Protector, Playmaker, Slasher, Glass Cleaner, High Flyer, Benchwarmer
+        <option value="Sharpshooter">Sharpshooter</option>
+        <option value="Defender">Defender</option>
+        <option value="Rim Protector">Rim Protector</option>
+        <option value="Playmaker">Playmaker</option>
+        <option value="Slasher">Slasher</option>
+        <option value="Glass Cleaner">Glass Cleaner</option>
+        <option value="High Flyer">High Flyer</option>
+        <option value="Benchwarmer">Benchwarmer</option>
+      </select>
+    </div>
+  </div>
+  <br>
+  <div class="submit-container">
+    <button type="button" class="submit">Create Player</button>
+  </div>
+  <script src="app/app.js"></script>
+</body>
+</html>
+<!-- DEMO
+   <div class="container">
     <div class="row mb-3">
       <div class="input-group col-sm-5">
         <div class="input-group-prepend">
@@ -46,7 +100,4 @@
         </tbody>
       </table>
     </div>
-  </div>
-  <script src="app/app.js"></script>
-</body>
-</html>
+  </div> -->

@@ -11,10 +11,42 @@ inputs (border swag)
 https://getbootstrap.com/docs/4.3/getting-started/introduction/
 */
 
-th {
-  text-decoration: underline;
+.heading{
+	display:flex;
+	justify-content: center;
+	margin:20px;
 }
-
-label {
-  text-decoration: underline;
+.name-container{
+	display:flex;
+	justify-content: center;
+	margin: 20px;
+}
+.name-input{
+	display:flex;
+	justify-content: center;
+	margin:10px;
+}
+.other-inputs{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 700px;
+	margin:auto;
+}
+.jersey{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.position{
+	display:flex;
+	flex-direction: row;
+}
+.archetype{
+	display:flex;
+	flex-direction: row;
+}
+.submit-container{
+	display: flex;
+	justify-content: center;
 }
