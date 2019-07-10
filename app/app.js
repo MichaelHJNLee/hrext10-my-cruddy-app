@@ -28,10 +28,10 @@ var showDatabase = function() {
   for (var i = 0; i < window.localStorage.length; i++) {
     var name = window.localStorage.key(i);
     var obj = JSON.parse(window.localStorage.getItem(window.localStorage.key(i)));
-    var num = obj['num']
-    var pos = obj['pos']
-    var arc = obj['arc']
-    $('tbody').append(`<tr id=${name}><td>${name}</td><td>${num}</td><td>${pos}</td><td>${arc}</td><td id='${name}' class='x' onmouseover=""style="cursor: pointer;">x</td></tr>`)
+    var num = obj['num'];
+    var pos = obj['pos'];
+    var arc = obj['arc'];
+    $('tbody').append(`<tr><td id='${name}'>${name}</td><td id='${name}'>${num}</td><td id='${name}'>${pos}</td><td id='${name}'>${arc}</td><td id='${name}' class='x' onmouseover=""style="cursor: pointer;">x</td></tr>`);
   }
 }
 $(document).ready(function() {
@@ -50,15 +50,32 @@ $(document).ready(function() {
   	var stringed = JSON.stringify(object);
   	if (name === ''){
   		alertName();
-  	} else if(nameExists(name)){
+  	} else if (nameExists(name)){
   		if (confirm('This player already exists. Do you want to update this player instead?')){
   			createPlayer(name,stringed);
-  			window.location.reload()
+  			window.location.reload();
   		}
   	} else {
   	  	createPlayer(name, stringed);	
-  	  	window.location.reload()
+  	  	window.location.reload();
   	  }
+  })
+  $('.update').on('click', function(){
+  	var object = {};
+  	var name = document.getElementById('name').value;
+  	object['num'] = document.getElementById('numbers').value;
+  	object['pos'] = document.getElementById('pos').value;
+  	object['arc'] = document.getElementById('arc').value;
+  	var stringed = JSON.stringify(object);
+  	if (nameExists(name)){
+  		createPlayer(name,stringed);
+  		window.location.reload();
+  	} else {
+  		if (confirm('This player does not currently exist. Would you like to create a new player?')){
+  			createPlayer(name,stringed);
+  			window.location.reload();
+  		}
+  	}
   })
   $('.clear').on('click', function(){
   	if (confirm('Are you sure you want to delete all your existing players?')){
@@ -73,9 +90,12 @@ $(document).ready(function() {
   	}
   })
   $('tr').on('click', function(){
-  	console.log(event.target)
-  	// document.getElementById('name').value = 
-  	// document.getElementById('numbers').value = 
+  	var name = event.target.id;
+  	var obj = JSON.parse(window.localStorage.getItem(name));
+  	document.getElementById('name').value = name;
+  	document.getElementById('numbers').value = obj['num'];
+  	document.getElementById('pos').value = obj['pos'];
+  	document.getElementById('arc').value = obj['arc'];
   })
 })
 

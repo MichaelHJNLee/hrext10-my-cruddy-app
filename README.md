@@ -40,6 +40,6 @@ Table:
 
 You can click on a row in the table to select player.
 Selecting a player populates values of inputs with key and values. 
-From there you can randomize some more to edit your player.
-Delete Player button deletes player.
+From there you can edit your player.
+X button deletes player.
 */
