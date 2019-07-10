@@ -10,7 +10,6 @@ inputs (border swag)
 
 https://getbootstrap.com/docs/4.3/getting-started/introduction/
 */
-
 .heading{
 	display:flex;
 	justify-content: center;
@@ -48,5 +47,15 @@ https://getbootstrap.com/docs/4.3/getting-started/introduction/
 }
 .submit-container{
 	display: flex;
+	width:20%;
+	height: 100px;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.row{
+	display:flex;
+	width: 60%;
+	height: auto;
+	margin: auto;
 	justify-content: center;
 }
