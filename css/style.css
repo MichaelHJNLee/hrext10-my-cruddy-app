@@ -10,15 +10,21 @@ inputs (border swag)
 
 https://getbootstrap.com/docs/4.3/getting-started/introduction/
 */
+body{
+	background-color: #d3d3d3;
+}
 .heading{
 	display:flex;
-	justify-content: center;
-	margin:20px;
+	justify-content: space-around;
+	width:53%;
+	margin:auto;
+	font-family: 'Russo One', sans-serif;
 }
 .name-container{
 	display:flex;
 	justify-content: center;
 	margin: 20px;
+	font-family: 'Russo One', sans-serif;
 }
 .name-input{
 	display:flex;
@@ -29,21 +35,25 @@ https://getbootstrap.com/docs/4.3/getting-started/introduction/
 	display:flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 700px;
+	width: 63%;
 	margin:auto;
+	font-family: 'Russo One', sans-serif;
 }
 .jersey{
 	display:flex;
 	flex-direction: row;
 	justify-content: space-around;
+	font-family: 'Russo One', sans-serif;
 }
 .position{
 	display:flex;
 	flex-direction: row;
+	font-family: 'Russo One', sans-serif;
 }
 .archetype{
 	display:flex;
 	flex-direction: row;
+	font-family: 'Russo One', sans-serif;
 }
 .submit-container{
 	display: flex;
@@ -51,6 +61,7 @@ https://getbootstrap.com/docs/4.3/getting-started/introduction/
 	height: 100px;
 	justify-content: space-between;
 	flex-direction: column;
+	font-family: 'Russo One', sans-serif;
 }
 .row{
 	display:flex;
@@ -58,4 +69,5 @@ https://getbootstrap.com/docs/4.3/getting-started/introduction/
 	height: auto;
 	margin: auto;
 	justify-content: center;
+	font-family: 'Russo One', sans-serif;
 }

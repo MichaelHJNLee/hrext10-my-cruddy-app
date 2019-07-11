@@ -31,7 +31,9 @@ var showDatabase = function() {
     var num = obj['num'];
     var pos = obj['pos'];
     var arc = obj['arc'];
-    $('tbody').append(`<tr><td id='${name}'>${name}</td><td id='${name}'>${num}</td><td id='${name}'>${pos}</td><td id='${name}'>${arc}</td><td id='${name}' class='x' onmouseover=""style="cursor: pointer;">x</td></tr>`);
+    var team = obj['team'];
+    var img = `<img src="images/${team}.png" alt="teamlogo" style="width:50px;height:50px;">`
+    $('tbody').append(`<tr><td id='${name}'>${name}</td><td id='${name}'>${num}</td><td id='${name}'>${pos}</td><td id='${name}'>${arc}</td><td id='${name}'>${img}</td><td id='${name}' class='x' onmouseover=""style="cursor: pointer;">x</td></tr>`);
   }
 }
 $(document).ready(function() {
@@ -47,6 +49,7 @@ $(document).ready(function() {
   	object['num'] = document.getElementById('numbers').value;
   	object['pos'] = document.getElementById('pos').value;
   	object['arc'] = document.getElementById('arc').value;
+    object['team'] = document.getElementById('team').value;
   	var stringed = JSON.stringify(object);
   	if (name === ''){
   		alertName();
@@ -66,6 +69,7 @@ $(document).ready(function() {
   	object['num'] = document.getElementById('numbers').value;
   	object['pos'] = document.getElementById('pos').value;
   	object['arc'] = document.getElementById('arc').value;
+    object['team'] = document.getElementById('team').value;
   	var stringed = JSON.stringify(object);
   	if (nameExists(name)){
   		createPlayer(name,stringed);
@@ -96,6 +100,7 @@ $(document).ready(function() {
   	document.getElementById('numbers').value = obj['num'];
   	document.getElementById('pos').value = obj['pos'];
   	document.getElementById('arc').value = obj['arc'];
+    document.getElementById('team').value = obj['team'];
   })
 })
 

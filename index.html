@@ -10,10 +10,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
  </head>
 <body class="m-3">
   <div class="heading">
-    <h1>NBA2K MyPlayer Creator</h1>
+    <img src="images/2k logo.png" alt="NBA2K" style="width:350px;height:50px;"><h1>MyPlayer Creator</h1>
   </div>
   <div class="name-container">
     <h3>Player Name</h3>
@@ -44,7 +45,6 @@
     <div class="archetype">
       Archetype: 
       <select class="select-archetype" id= 'arc'>
-        Sharpshooter, Defensive Specialist, Rim Protector, Playmaker, Slasher, Glass Cleaner, High Flyer, Benchwarmer
         <option value="Sharpshooter">Sharpshooter</option>
         <option value="Defender">Defender</option>
         <option value="Rim Protector">Rim Protector</option>
@@ -53,6 +53,41 @@
         <option value="Glass Cleaner">Glass Cleaner</option>
         <option value="High Flyer">High Flyer</option>
         <option value="Benchwarmer">Benchwarmer</option>
+      </select>
+    </div>
+    <div class="team">
+      Team: 
+      <select class="select-team" id= 'team'>
+        <option value="Hawks">Atlanta Hawks</option>
+        <option value="Celtics">Boston Celtics</option>
+        <option value="Nets">Brooklyn Nets</option>
+        <option value="Hornets">Charlotte Hornets</option>
+        <option value="Bulls">Chicago Bulls</option>
+        <option value="Cavaliers">Cleveland Cavaliers</option>
+        <option value="Mavericks">Dallas Mavericks</option>
+        <option value="Nuggets">Denver Nuggets</option>
+        <option value="Pistons">Detroit Pistons</option>
+        <option value="Warriors">Golden State Warriors</option>
+        <option value="Rockets">Houston Rockets</option>
+        <option value="Pacers">Indiana Pacers</option>
+        <option value="Clippers">Los Angeles Clippers</option>
+        <option value="Lakers">Los Angeles Lakers</option>
+        <option value="Grizzlies">Memphis Grizzlies</option>
+        <option value="Heat">Miami Heat</option>
+        <option value="Bucks">Milwaukee Bucks</option>
+        <option value="Timberwolves">Minnesota Timberwolves</option>
+        <option value="Pelicans">New Orleans Pelicans</option>
+        <option value="Knicks">New York Knicks</option>
+        <option value="Thunder">Oklahoma City Thunder</option>
+        <option value="Magic">Orlando Magic</option>
+        <option value="76ers">Philadelphia 76ers</option>
+        <option value="Suns">Phoenix Suns</option>
+        <option value="Trailblazers">Portland Trailblazers</option>
+        <option value="Kings">Sacramento Kings</option>
+        <option value="Spurs">San Antonio Spurs</option>
+        <option value="Raptors">Toronto Raptors</option>
+        <option value="Jazz">Utah Jazz</option>
+        <option value="Wizards">Washington Wizards</option>
       </select>
     </div>
   </div>
@@ -75,6 +110,7 @@
             <th scope="col">#</th>
             <th scope="col">Position</th>
             <th scope="col">Archetype</th>
+            <th scope="col">Team</th>
             <th scope="col"></th>
           </tr>
         </thead>
