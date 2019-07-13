@@ -37,7 +37,11 @@ var showDatabase = function() {
   }
 }
 $(document).ready(function() {
-  showDatabase();
+  if (window.localStorage.length === 0){
+
+  } else {
+      showDatabase();
+  }
   $(function(){
     for (i = 0; i <= 99; i++){
         $('.select-numbers').append($('<option></option>').val(i).html(i));
@@ -71,7 +75,9 @@ $(document).ready(function() {
   	object['arc'] = document.getElementById('arc').value;
     object['team'] = document.getElementById('team').value;
   	var stringed = JSON.stringify(object);
-  	if (nameExists(name)){
+    if (name === ''){
+      alertName();
+    } else if(nameExists(name)){
   		createPlayer(name,stringed);
   		window.location.reload();
   	} else {
@@ -82,7 +88,9 @@ $(document).ready(function() {
   	}
   })
   $('.clear').on('click', function(){
-  	if (confirm('Are you sure you want to delete all your existing players?')){
+    if (window.localStorage.length === 0){
+      alert("There are no players to delete.");
+    } else if (confirm('Are you sure you want to delete all your existing players?')){
   		clearDatabase();
   		showDatabase();
   	}

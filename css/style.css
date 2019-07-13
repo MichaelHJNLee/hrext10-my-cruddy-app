@@ -11,7 +11,11 @@ inputs (border swag)
 https://getbootstrap.com/docs/4.3/getting-started/introduction/
 */
 body{
-	background-color: #d3d3d3;
+	background-repeat: no-repeat;
+	height:100%;
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
 }
 .heading{
 	display:flex;
@@ -69,5 +73,12 @@ body{
 	height: auto;
 	margin: auto;
 	justify-content: center;
+	font-family: 'Russo One', sans-serif;
+}
+select{
+	margin:3px;
+}
+input{
+	border-radius:5px;
 	font-family: 'Russo One', sans-serif;
 }
