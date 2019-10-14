@@ -8,11 +8,11 @@ Create Read Update and Delete framework using JS
 - [x] How to caputure data? (web form)
 - [x] How to modify data? (update action, delete action)
 - [x] How to view data? (style?)
-- [ ] UI/UX considerations (how are we going to use this)
+- [x] UI/UX considerations (how are we going to use this)
 
  ### Advanced Reqs
-- [ ] update/delete column
-- [ ] button disabling when input values are invalid
+- [x] update/delete column
+- [x] button disabling when input values are invalid
 
 /*PROJECT SCOPING
 NBA2K MyPlayer Creator 
